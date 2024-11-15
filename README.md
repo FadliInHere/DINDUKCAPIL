@@ -1,2 +1,3 @@
 # dindukcapil.oye
- 
+
+ Repositori ini dibuat untuk pengembangan website resmi Dinas Kependudukan dan Pencatatan Sipil (Disdukcapil) sebagai bagian dari Praktik Kerja Lapangan (PKL). Dalam proyek ini, saya bertanggung jawab merancang dan mengimplementasikan berbagai fitur yang mendukung kemudahan layanan kependudukan secara daring bagi masyarakat. Website ini dirancang untuk menyediakan informasi dan layanan terkait pendaftaran penduduk serta pencatatan sipil secara lengkap, seperti pembuatan KTP, KK, akta kelahiran, serta layanan konsultasi dan pengaduan online. Pengembangan proyek ini juga mencakup peningkatan antarmuka yang responsif agar dapat diakses dengan nyaman di berbagai perangkat, sehingga memperkuat aksesibilitas dan efektivitas pelayanan publik di Disdukcapil.
