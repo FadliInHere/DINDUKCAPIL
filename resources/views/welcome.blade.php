@@ -10,6 +10,37 @@
 
     <style>
         /* Dark Mode Styles */
+
+        /* .dark nav {
+        background-color: #1a202c;
+        border-color: #4a5568;
+        }
+
+        .dark nav a,
+        .dark nav button {
+            color: #63b3ed;
+        }
+
+        .dark nav a:hover,
+        .dark nav button:hover {
+            color: #90cdf4;
+        }
+        .transform {
+            transition-property: transform;
+        }
+
+        .transition-transform {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .translate-y-full {
+            transform: translateY(100%);
+        } */
+
         body.dark {
             background-color: #1a202c; /* Dark background */
             color: white; /* Light text color */
@@ -70,6 +101,61 @@
         <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a>
     </div>
 </nav>
+
+
+<!-- Fixed Bottom Navigation -->
+<!-- <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-around items-center h-16">
+            <a href="#home" class="flex flex-col items-center text-blue-500 hover:text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="#about" class="flex flex-col items-center text-blue-500 hover:text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H14" />
+                </svg>
+                <span class="text-xs mt-1">Berita</span>
+            </a>
+            <a href="#faq" class="flex flex-col items-center text-blue-500 hover:text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-xs mt-1">FAQ</span>
+            </a>
+            <button id="loginButton" class="flex flex-col items-center text-blue-500 hover:text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span class="text-xs mt-1">Login</span>
+            </button>
+            <button id="menuButton" class="flex flex-col items-center text-blue-500 hover:text-blue-700 md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <span class="text-xs mt-1">Menu</span>
+            </button>
+        </div>
+    </div>
+</nav> -->
+
+<!-- Mobile Menu Popup -->
+<div id="mobileMenu" class="fixed bottom-16 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40 p-4 hidden transform transition-transform duration-300 translate-y-full">
+    <div class="flex flex-col space-y-4">
+        <a href="{{ route('admin.login') }}" class="text-gray-600 hover:text-blue-600">Login</a>
+        <a href="{{ route('register') }}" class="text-gray-600 hover:text-blue-600">Register</a>
+    </div>
+</div>
+
+<!-- Dark Mode Version of Menu -->
+<div id="darkMobileMenu" class="fixed bottom-16 left-0 right-0 bg-gray-800 border-t border-gray-700 shadow-lg z-40 p-4 hidden transform transition-transform duration-300 translate-y-full">
+    <div class="flex flex-col space-y-4">
+        <a href="{{ route('admin.login') }}" class="text-gray-300 hover:text-blue-400">Login</a>
+        <a href="{{ route('register') }}" class="text-gray-300 hover:text-blue-400">Register</a>
+    </div>
+</div>
 
 
     <!-- Informasi Nav -->
@@ -271,28 +357,72 @@
         burgerIcon.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        // Dark Mode Toggle
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark');
         });
-            // JavaScript function to toggle visibility of answers with smooth transition
         function toggleAnswer(answerId) {
         const answers = document.querySelectorAll('.answer');
         const currentAnswer = document.getElementById(answerId);
-        // Close all answers
         answers.forEach((answer) => {
             if (answer !== currentAnswer) {
-                answer.style.maxHeight = null; // Collapse the other answers
+                answer.style.maxHeight = null;
             }
         });
-        // Toggle the current answer
         if (currentAnswer.style.maxHeight) {
-            currentAnswer.style.maxHeight = null; // Collapse it if it's already open
+            currentAnswer.style.maxHeight = null;
         } else {
-            currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px"; // Expand the current answer
+            currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
         }
     }
+    // Menu Toggle Functionality
+    // const menuButton = document.getElementById('menuButton');
+    // const loginButton = document.getElementById('loginButton');
+    // const mobileMenu = document.getElementById('mobileMenu');
+    // const darkMobileMenu = document.getElementById('darkMobileMenu');
+    
+    // function toggleMenu() {
+    //     const isDark = document.body.classList.contains('dark');
+    //     const menuToToggle = isDark ? darkMobileMenu : mobileMenu;
+        
+    //     if (menuToToggle.classList.contains('hidden')) {
+    //         menuToToggle.classList.remove('hidden');
+    //         setTimeout(() => {
+    //             menuToToggle.classList.remove('translate-y-full');
+    //         }, 10);
+    //     } else {
+    //         menuToToggle.classList.add('translate-y-full');
+    //         setTimeout(() => {
+    //             menuToToggle.classList.add('hidden');
+    //         }, 300);
+    //     }
+    // }
+    
+    // menuButton.addEventListener('click', toggleMenu);
+    // loginButton.addEventListener('click', toggleMenu);
+    // document.addEventListener('click', (event) => {
+    //     if (!event.target.closest('#mobileMenu') && 
+    //         !event.target.closest('#darkMobileMenu') && 
+    //         !event.target.closest('#menuButton') &&
+    //         !event.target.closest('#loginButton')) {
+    //         mobileMenu.classList.add('translate-y-full', 'hidden');
+    //         darkMobileMenu.classList.add('translate-y-full', 'hidden');
+    //     }
+    // });
+    // const darkModeToggle = document.getElementById('dark-mode-toggle');
+    // if (darkModeToggle) {
+    //     darkModeToggle.addEventListener('click', () => {
+    //         const isDark = document.body.classList.toggle('dark');
+    //         const nav = document.querySelector('nav');
+    //         if (isDark) {
+    //             nav.classList.remove('bg-white', 'border-gray-200');
+    //             nav.classList.add('bg-gray-800', 'border-gray-700');
+    //         } else {
+    //             nav.classList.remove('bg-gray-800', 'border-gray-700');
+    //             nav.classList.add('bg-white', 'border-gray-200');
+    //         }
+    //     });
+    // }
     </script>
 
 </body>
