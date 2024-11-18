@@ -429,8 +429,8 @@ class ComposerStaticInitacc5395ccef7f73bca59b10a7ae4c3dc
         ),
         'Fruitcake\\Cors\\' => 
         array (
-            0 => __DIR__ . '/..' . '/fruitcake/php-cors/src',
-            1 => __DIR__ . '/..' . '/fruitcake/laravel-cors/src',
+            0 => __DIR__ . '/..' . '/fruitcake/laravel-cors/src',
+            1 => __DIR__ . '/..' . '/fruitcake/php-cors/src',
         ),
         'Faker\\' => 
         array (
@@ -510,6 +510,7 @@ class ComposerStaticInitacc5395ccef7f73bca59b10a7ae4c3dc
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\MailSettingController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/MailSettingController.php',
+        'App\\Http\\Controllers\\Admin\\PengajuanKtpController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PengajuanKtpController.php',
         'App\\Http\\Controllers\\Admin\\PermissionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PermissionController.php',
         'App\\Http\\Controllers\\Admin\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PostController.php',
         'App\\Http\\Controllers\\Admin\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProfileController.php',
@@ -549,6 +550,7 @@ class ComposerStaticInitacc5395ccef7f73bca59b10a7ae4c3dc
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Models\\Frontuser' => __DIR__ . '/../..' . '/app/Models/Frontuser.php',
         'App\\Models\\Mailsetting' => __DIR__ . '/../..' . '/app/Models/Mailsetting.php',
+        'App\\Models\\PengajuanKtp' => __DIR__ . '/../..' . '/app/Models/PengajuanKtp.php',
         'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

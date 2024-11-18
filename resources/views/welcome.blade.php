@@ -51,7 +51,8 @@
         </a>
         <div class="hidden md:flex space-x-4">
             <strong>
-            <a href="{{ route('admin.login') }}" class="text-black hover:text-white">Login | </a>
+            <a href="{{ route('admin.login') }}" class="text-black hover:text-white">Login Admin | </a>
+            <a href="{{ route('login') }}" class="text-black hover:text-white">Login User | </a>
             <a href="{{ route('register') }}" class="text-black hover:text-white">Register | </a>
             <a href="#faq" class="text-black hover:text-white">FAQ</a>
             </strong>
@@ -65,8 +66,9 @@
         </div>
     </div>
     <div class="md:hidden hidden flex-col space-y-4 bg-white p-4 absolute top-16 right-0 w-48 shadow-lg rounded-lg" id="mobile-menu">
-        <a href="{{ route('admin.login') }}" class="text-gray-600 hover:text-blue-600">Login</a>
-        <a href="{{ route('register') }}" class="text-gray-600 hover:text-blue-600">Register</a>
+    <a href="{{ route('admin.login') }}" class="text-black hover:text-white">Login Admin | </a>
+    <a href="{{ route('login') }}" class="text-black hover:text-white">Login User | </a>
+        <a href="{{ route('register') }}" class="text-gray-600 hover:text-blue-600">Register |</a>
         <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a>
     </div>
 </nav>
@@ -253,7 +255,7 @@
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center">
-            <p>&copy;2024 Dindukcapil. PKL-Smecone25</p>
+        <p>&copy;Dindukcapil. PKL-Smecone25 | <script>document.write(new Date().getFullYear());</script></p>
         </div>
     </footer>
 
