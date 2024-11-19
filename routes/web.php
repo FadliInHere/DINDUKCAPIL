@@ -7,7 +7,9 @@ use App\Http\Controllers\Admin\{
     PengajuanKtpController,
     KehilanganKtpController,
 };
-
+use App\Http\Controllers\Front\{
+    PengajuanFormController,
+};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +43,14 @@ Route::get('/test-mail',function(){
 Route::get('/dashboard', function () {
     return view('front.dashboard');
 })->middleware(['front'])->name('dashboard');
-
+Route::group(['prefix' => 'front', 'as' => 'front.'], function () {
+    // Authenticated routes (perlu login)
+        Route::group(['middleware' => 'auth:front'], function () {
+        Route::get('formpengajuan', [PengajuanFormController::class, 'index'])->name('form.index');
+        Route::get('formpengajuan/create', [PengajuanFormController::class, 'create'])->name('form.create');
+        Route::post('formpengajuan', [PengajuanFormController::class, 'store'])->name('form.store');
+        });
+    });
 
 require __DIR__.'/front_auth.php';
 

@@ -26,6 +26,8 @@
 
                     @include('front.layouts.header')
 
+
+
                     @if(\Session::has('success'))
                         <div class="text-green-600 pt-5 pl-5">
                             <ul>
